@@ -179,7 +179,7 @@ public class RunKelheimScenario extends MATSimApplication {
 
 		SimWrapperConfigGroup sw = ConfigUtils.addOrGetModule(config, SimWrapperConfigGroup.class);
 
-		// Relative to config
+		// Relative to config Schlecht
 		sw.defaultParams().shp = "../shp/dilutionArea.shp";
 		sw.defaultParams().mapCenter = "11.89,48.91";
 		sw.defaultParams().mapZoomLevel = 11d;
