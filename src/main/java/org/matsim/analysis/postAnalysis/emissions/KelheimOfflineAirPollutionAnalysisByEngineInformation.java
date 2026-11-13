@@ -281,12 +281,14 @@ public class KelheimOfflineAirPollutionAnalysisByEngineInformation implements MA
 			} else if (type.getId().toString().equals("car")){
 				VehicleUtils.setHbefaVehicleCategory(engineInformation, HbefaVehicleCategory.PASSENGER_CAR.toString());
 				VehicleUtils.setHbefaEmissionsConcept(engineInformation, "average");
+				//VehicleUtils.setHbefaEmissionsConcept(engineInformation, "electricity");
 			} else if (type.getId().toString().equals("conventional_vehicle") || type.getId().toString().equals("autonomous_vehicle")){
 				VehicleUtils.setHbefaVehicleCategory(engineInformation, HbefaVehicleCategory.LIGHT_COMMERCIAL_VEHICLE.toString());
 				VehicleUtils.setHbefaEmissionsConcept(engineInformation, "electricity");
 			} else if (type.getId().toString().equals("freight")){
 				VehicleUtils.setHbefaVehicleCategory(engineInformation, HbefaVehicleCategory.HEAVY_GOODS_VEHICLE.toString());
 				VehicleUtils.setHbefaEmissionsConcept(engineInformation, "average");
+				//VehicleUtils.setHbefaEmissionsConcept(engineInformation, "electricity");
 			} else {
 				throw new IllegalArgumentException("does not know how to handle vehicleType " + type.getId().toString());
 			}
